@@ -5,9 +5,14 @@ import no.sintef.cloudml.engine.Engine
 object Client {
 
     def main(args: Array[String])  {
-        val template = """{"nodes": [{"size": "Small"},{"size": "Small"}]}"""
-        val account = """{"provider":"aws-ec2", "authKeys":{"accessKey":"...", "secretKey": "..."}}"""
-        val runtimeInstance = Engine.apply(account, List(template))
-        println("Got instance: " + runtimeInstance)
+        val template = """{"nodes": [{"name": "test1", "size": "Small"},{"name": "test2", "size": "Medium"}]}"""
+        val account = """{"provider":"aws-ec2", "authKeys":{"accessKey": "...", "secretKey": "..."}}"""
+        val runtimeInstances = Engine(account, List(template))
+        println("Got instances: ")
+        runtimeInstances.foreach(instance => {
+            println(instance.instance.name + ": id: " + instance.id + ". Private address: " 
+              + instance.privateAddress + ". Public address: " + instance.publicAddress)
+        })
+        System.exit(0)
     }
 }
