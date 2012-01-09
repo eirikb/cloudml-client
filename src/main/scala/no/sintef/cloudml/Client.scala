@@ -13,10 +13,9 @@ object Client extends Application {
 
     val account = """{
         "provider": "aws-ec2", 
-        "credential": {
-            "identity": "...", 
-            "credential": "..."
-        }}"""
+        "identity": "...", 
+        "credential": "..."
+        }"""
 
     val runtimeInstances = Engine(account, List(template))
     println("Got instances: ")
