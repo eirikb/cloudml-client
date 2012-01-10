@@ -6,9 +6,9 @@ object Client extends Application {
 
     val template = """{
         "nodes": [{
-            "name": "test1", "minRam": 0
+            "name": "test1", "minRam": 0, "minCores": 1
         },{
-            "name": "test2", "minRam": 1000
+            "name": "test2", "minRam": 1000, "minCores": 1
         }]}"""
 
     val account = """{
