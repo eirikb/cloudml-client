@@ -49,22 +49,4 @@ object Client extends Application {
             }
         })
     })
-
-
-    // Simple hack...
-    /*
-    runtimeInstances.foreach(ri =>  {
-        println("Sleeping...")
-        while (ri.status != Status.Started) {
-            Thread.sleep(1000)
-        }
-        println("Node OK! " + ri + " - " + ri.properties)
-        val id = ri.properties("id")
-        println("Destroying: " + id)
-        Engine.destroyNode(id)
-        println("Node destroyed")
-    })
-    */
-
-    //System.exit(0)
 }
