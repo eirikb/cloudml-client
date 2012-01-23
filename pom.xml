@@ -10,6 +10,13 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <repositories>
+        <repository>
+            <id>cloudml-engine</id>
+            <url>https://repository-eirikb.forge.cloudbees.com/release/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.scala-lang</groupId>
@@ -17,9 +24,9 @@
             <version>2.9.1</version>
         </dependency>
         <dependency>
-            <groupId>no.sintef.cloudml</groupId>
+            <groupId>no.sintef</groupId>
             <artifactId>engine</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>0.1</version>
         </dependency>
     </dependencies>
 
