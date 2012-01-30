@@ -7,9 +7,13 @@ object Client extends Application {
 
     val template = """{
             "nodes": [{
-                "name": "test1", "minRam": 0, "minCores": 1, "minDisk": 0
+                "name": "test1"
             },{
-                "name": "test2", "minRam": 0, "minCores": 1, "minDisk": 0
+                "name": "test2", 
+                "minRam": 10, 
+                "minCores": 2, 
+                "minDisk": 0, 
+                "locationId": "us-west-1a"
         }]}"""
 
     val account = """{
@@ -30,7 +34,6 @@ object Client extends Application {
         ri.addListener( (event) =>  {
             event match {
                 case Event.Property => 
-                    println("Property added to " + ri.instance.name)
                 case Event.Status => 
                     println("Status changed for " + ri.instance.name + ": " + ri.status)
                     if (ri.status == Status.Started) {
@@ -38,7 +41,6 @@ object Client extends Application {
                         println("Node " + ri.instance.name + " is now running: " + ri)
                         println(ri.properties)
                         val id = ri.properties("id")
-                        println("Destroying " + ri.instance.name + " (" + id + ")")
                         Engine.destroyNode(id)
                         println("Node " + ri.instance.name + " destroyed")
                     }
