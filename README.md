@@ -10,5 +10,5 @@ Run like this:
 mvn scala:run -DaddArgs="examples/account.json|examples/simple.json"
 ```
 
-The library (cloudml-engine) is currently hosted at cloudbees:  
-https://repository-eirikb.forge.cloudbees.com/release/
+The library ([cloudml-engine](https://github.com/eirikb/cloudml-engine)) is currently hosted at cloudbees:  
+https://repository-eirikb.forge.cloudbees.com/release
