@@ -1,0 +1,14 @@
+{
+    "name": "test",
+    "loadBalancer": {
+        "name": "test",
+        "protocol": "http",
+        "loadBalancerPort": 80,
+        "instancePort": 80
+    },
+    "nodes": [{
+        "name": "test1"
+    }, {
+        "name": "test2"
+    }]
+}
