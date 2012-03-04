@@ -6,7 +6,9 @@ Edit example/account.json to contain your credentials.
 
 Run like this:
 
-    mvn scala:run -DaddArgs="examples/account.json|examples/simple.json
+```Bash
+mvn scala:run -DaddArgs="examples/account.json|examples/simple.json"
+```
 
 The library (cloudml-engine) is currently hosted at cloudbees:  
 https://repository-eirikb.forge.cloudbees.com/release/
